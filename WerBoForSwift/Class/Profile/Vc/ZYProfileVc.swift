@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZYProfileVc: UIViewController {
+class ZYProfileVc: ZYBaseTableVc {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,12 +8,13 @@
 
 import UIKit
 
-class ZYHomeVc: UIViewController {
-
+class ZYHomeVc: ZYBaseTableVc {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZYMessageVc: UIViewController {
+class ZYMessageVc: ZYBaseTableVc {
 
     override func viewDidLoad() {
         super.viewDidLoad()

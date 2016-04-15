@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0974BCE01CB5013C003D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BCDF1CB5013C003D5541 /* AppDelegate.swift */; };
-		0974BCE21CB5013C003D5541 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BCE11CB5013C003D5541 /* ViewController.swift */; };
-		0974BCE51CB5013C003D5541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0974BCE31CB5013C003D5541 /* Main.storyboard */; };
 		0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0974BCE61CB5013C003D5541 /* WerBoForSwift.xcdatamodeld */; };
 		0974BCEA1CB5013C003D5541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0974BCE91CB5013C003D5541 /* Assets.xcassets */; };
-		0974BCED1CB5013C003D5541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0974BCEB1CB5013C003D5541 /* LaunchScreen.storyboard */; };
 		0974BCF81CB5013C003D5541 /* WerBoForSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BCF71CB5013C003D5541 /* WerBoForSwiftTests.swift */; };
 		0974BD031CB5013C003D5541 /* WerBoForSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BD021CB5013C003D5541 /* WerBoForSwiftUITests.swift */; };
+		0974BD2B1CB506D2003D5541 /* ZYTabBarVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BD2A1CB506D2003D5541 /* ZYTabBarVc.swift */; };
+		0974BD2F1CB5070E003D5541 /* ZYHomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BD2E1CB5070E003D5541 /* ZYHomeVc.swift */; };
+		0974BD311CB50726003D5541 /* ZYMessageVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BD301CB50726003D5541 /* ZYMessageVc.swift */; };
+		0974BD331CB50741003D5541 /* ZYDiscoverVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BD321CB50741003D5541 /* ZYDiscoverVc.swift */; };
+		0974BD371CB50799003D5541 /* ZYProfileVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BD361CB50799003D5541 /* ZYProfileVc.swift */; };
+		0974BD3A1CB50EAA003D5541 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 0974BD391CB50EAA003D5541 /* MainVCSettings.json */; };
+		0994824A1CB656530047D2F9 /* ZYNullVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099482491CB656530047D2F9 /* ZYNullVc.swift */; };
+		0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */; };
+		0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +43,8 @@
 /* Begin PBXFileReference section */
 		0974BCDC1CB5013B003D5541 /* WerBoForSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WerBoForSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0974BCDF1CB5013C003D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0974BCE11CB5013C003D5541 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0974BCE41CB5013C003D5541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0974BCE71CB5013C003D5541 /* WerBoForSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WerBoForSwift.xcdatamodel; sourceTree = "<group>"; };
 		0974BCE91CB5013C003D5541 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0974BCEC1CB5013C003D5541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0974BCEE1CB5013C003D5541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0974BCF31CB5013C003D5541 /* WerBoForSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WerBoForSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0974BCF71CB5013C003D5541 /* WerBoForSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerBoForSwiftTests.swift; sourceTree = "<group>"; };
@@ -49,6 +52,15 @@
 		0974BCFE1CB5013C003D5541 /* WerBoForSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WerBoForSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0974BD021CB5013C003D5541 /* WerBoForSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerBoForSwiftUITests.swift; sourceTree = "<group>"; };
 		0974BD041CB5013C003D5541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0974BD2A1CB506D2003D5541 /* ZYTabBarVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYTabBarVc.swift; sourceTree = "<group>"; };
+		0974BD2E1CB5070E003D5541 /* ZYHomeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYHomeVc.swift; sourceTree = "<group>"; };
+		0974BD301CB50726003D5541 /* ZYMessageVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYMessageVc.swift; sourceTree = "<group>"; };
+		0974BD321CB50741003D5541 /* ZYDiscoverVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYDiscoverVc.swift; sourceTree = "<group>"; };
+		0974BD361CB50799003D5541 /* ZYProfileVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYProfileVc.swift; sourceTree = "<group>"; };
+		0974BD391CB50EAA003D5541 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		099482491CB656530047D2F9 /* ZYNullVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNullVc.swift; sourceTree = "<group>"; };
+		0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCommon.swift; sourceTree = "<group>"; };
+		0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYBaseTableVc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				0974BCDF1CB5013C003D5541 /* AppDelegate.swift */,
-				0974BCE11CB5013C003D5541 /* ViewController.swift */,
-				0974BCE31CB5013C003D5541 /* Main.storyboard */,
+				0974BD101CB505EC003D5541 /* Class */,
 				0974BCE91CB5013C003D5541 /* Assets.xcassets */,
-				0974BCEB1CB5013C003D5541 /* LaunchScreen.storyboard */,
 				0974BCEE1CB5013C003D5541 /* Info.plist */,
 				0974BCE61CB5013C003D5541 /* WerBoForSwift.xcdatamodeld */,
 			);
@@ -126,6 +136,206 @@
 				0974BD041CB5013C003D5541 /* Info.plist */,
 			);
 			path = WerBoForSwiftUITests;
+			sourceTree = "<group>";
+		};
+		0974BD101CB505EC003D5541 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD291CB505EC003D5541 /* Tools */,
+				0974BD111CB505EC003D5541 /* Common */,
+				0974BD1D1CB505EC003D5541 /* Main */,
+				0974BD191CB505EC003D5541 /* Home */,
+				0974BD211CB505EC003D5541 /* Message */,
+				0974BD151CB505EC003D5541 /* Discover */,
+				0974BD251CB505EC003D5541 /* Profile */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		0974BD111CB505EC003D5541 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0974BD151CB505EC003D5541 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD161CB505EC003D5541 /* Model */,
+				0974BD171CB505EC003D5541 /* Vc */,
+				0974BD181CB505EC003D5541 /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		0974BD161CB505EC003D5541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0974BD171CB505EC003D5541 /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD321CB50741003D5541 /* ZYDiscoverVc.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
+		0974BD181CB505EC003D5541 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0974BD191CB505EC003D5541 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD1A1CB505EC003D5541 /* Model */,
+				0974BD1B1CB505EC003D5541 /* Vc */,
+				0974BD1C1CB505EC003D5541 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0974BD1A1CB505EC003D5541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0974BD1B1CB505EC003D5541 /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD2E1CB5070E003D5541 /* ZYHomeVc.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
+		0974BD1C1CB505EC003D5541 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0974BD1D1CB505EC003D5541 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD381CB50EAA003D5541 /* Resource */,
+				0974BD1E1CB505EC003D5541 /* Model */,
+				0974BD1F1CB505EC003D5541 /* Vc */,
+				0974BD201CB505EC003D5541 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0974BD1E1CB505EC003D5541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0974BD1F1CB505EC003D5541 /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD2A1CB506D2003D5541 /* ZYTabBarVc.swift */,
+				0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
+		0974BD201CB505EC003D5541 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0974BD211CB505EC003D5541 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD221CB505EC003D5541 /* Model */,
+				0974BD231CB505EC003D5541 /* Vc */,
+				0974BD241CB505EC003D5541 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		0974BD221CB505EC003D5541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0974BD231CB505EC003D5541 /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD301CB50726003D5541 /* ZYMessageVc.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
+		0974BD241CB505EC003D5541 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0974BD251CB505EC003D5541 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD261CB505EC003D5541 /* Model */,
+				0974BD271CB505EC003D5541 /* Vc */,
+				0974BD281CB505EC003D5541 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0974BD261CB505EC003D5541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0974BD271CB505EC003D5541 /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD361CB50799003D5541 /* ZYProfileVc.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
+		0974BD281CB505EC003D5541 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0974BD291CB505EC003D5541 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		0974BD381CB50EAA003D5541 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0974BD391CB50EAA003D5541 /* MainVCSettings.json */,
+				099482491CB656530047D2F9 /* ZYNullVc.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,12 +400,14 @@
 		0974BCD41CB5013B003D5541 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZY;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "王志盼";
 				TargetAttributes = {
 					0974BCDB1CB5013B003D5541 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = T6FCKHRT95;
 					};
 					0974BCF21CB5013C003D5541 = {
 						CreatedOnToolsVersion = 7.2;
@@ -232,9 +444,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0974BCED1CB5013C003D5541 /* LaunchScreen.storyboard in Resources */,
+				0974BD3A1CB50EAA003D5541 /* MainVCSettings.json in Resources */,
 				0974BCEA1CB5013C003D5541 /* Assets.xcassets in Resources */,
-				0974BCE51CB5013C003D5541 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +470,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0994824A1CB656530047D2F9 /* ZYNullVc.swift in Sources */,
 				0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */,
-				0974BCE21CB5013C003D5541 /* ViewController.swift in Sources */,
+				0974BD371CB50799003D5541 /* ZYProfileVc.swift in Sources */,
+				0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */,
 				0974BCE01CB5013C003D5541 /* AppDelegate.swift in Sources */,
+				0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */,
+				0974BD2F1CB5070E003D5541 /* ZYHomeVc.swift in Sources */,
+				0974BD311CB50726003D5541 /* ZYMessageVc.swift in Sources */,
+				0974BD331CB50741003D5541 /* ZYDiscoverVc.swift in Sources */,
+				0974BD2B1CB506D2003D5541 /* ZYTabBarVc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +513,6 @@
 			targetProxy = 0974BCFF1CB5013C003D5541 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0974BCE31CB5013C003D5541 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0974BCE41CB5013C003D5541 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0974BCEB1CB5013C003D5541 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0974BCEC1CB5013C003D5541 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0974BD051CB5013C003D5541 /* Debug */ = {
@@ -403,6 +602,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WerBoForSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-111.WerBoForSwift";
@@ -414,6 +615,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WerBoForSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-111.WerBoForSwift";
@@ -488,6 +691,7 @@
 				0974BD091CB5013C003D5541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0974BD0A1CB5013C003D5541 /* Build configuration list for PBXNativeTarget "WerBoForSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +700,7 @@
 				0974BD0C1CB5013C003D5541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0974BD0D1CB5013C003D5541 /* Build configuration list for PBXNativeTarget "WerBoForSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +709,7 @@
 				0974BD0F1CB5013C003D5541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

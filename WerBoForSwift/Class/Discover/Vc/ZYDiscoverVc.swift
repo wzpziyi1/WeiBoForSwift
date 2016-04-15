@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZYDiscoverVc: UIViewController {
+class ZYDiscoverVc: ZYBaseTableVc {
 
     override func viewDidLoad() {
         super.viewDidLoad()

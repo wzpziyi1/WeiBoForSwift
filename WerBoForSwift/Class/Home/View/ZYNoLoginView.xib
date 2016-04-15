@@ -41,6 +41,9 @@
                     <state key="normal" title="注册" backgroundImage="common_button_white_disable">
                         <color key="titleColor" red="1" green="0.52549019610000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="clickRegistBtn:" destination="-1" eventType="touchUpInside" id="HyI-5Q-zZo"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjs-z3-6DM">
                     <rect key="frame" x="210" y="369.5" width="60" height="30"/>
@@ -51,6 +54,9 @@
                     <state key="normal" title="登陆" backgroundImage="common_button_white_disable">
                         <color key="titleColor" red="1" green="0.52549019610000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="clickLoginBtn:" destination="-1" eventType="touchUpInside" id="AAY-IC-NrJ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

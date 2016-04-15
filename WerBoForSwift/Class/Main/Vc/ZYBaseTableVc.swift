@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ZYBaseTableVc: UITableViewController {
+class ZYBaseTableVc: UITableViewController, ZYNoLoginViewDelegate {
 
-    var isLogin : Bool = false
+    var isLogin : Bool = true
     var noLoginView : ZYNoLoginView!
     
     //MARK: -life cycle
@@ -33,6 +33,30 @@ class ZYBaseTableVc: UITableViewController {
         noLoginView = ZYNoLoginView.createNoLoginView() as! ZYNoLoginView
         view = noLoginView
         noLoginView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight)
+        noLoginView.delegate = self
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: UIBarButtonItemStyle.Plain, target: self, action: "clickLeftBarItem")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: UIBarButtonItemStyle.Plain, target: self, action: "clickRightBarItem")
+    }
+    
+    @objc private func clickLeftBarItem()
+    {
+        print(__FUNCTION__)
+    }
+    
+    @objc private func clickRightBarItem()
+    {
+        print(__FUNCTION__)
+    }
+    
+    //MARK: -ZYNoLoginViewDelegate
+    func noLoginViewDidClickRegistBtn()
+    {
+        clickLeftBarItem()
+    }
+    
+    func noLoginViewDidClickLoginBtn()
+    {
+        clickRightBarItem()
     }
     
 }

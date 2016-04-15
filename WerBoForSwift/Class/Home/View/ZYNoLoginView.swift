@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol ZYNoLoginViewDelegate : NSObjectProtocol
+{
+    func noLoginViewDidClickRegistBtn()
+    func noLoginViewDidClickLoginBtn()
+}
+
 class ZYNoLoginView: UIView {
     @IBOutlet weak var customView: UIView!
     
     @IBOutlet weak var iconView: UIImageView!
+    
+    weak var delegate: ZYNoLoginViewDelegate?
     
     class func createNoLoginView() ->UIView
     {
@@ -47,6 +55,14 @@ class ZYNoLoginView: UIView {
         basicAnimation.repeatCount = MAXFLOAT
         
         iconView.layer.addAnimation(basicAnimation, forKey: nil)
+    }
+    
+    @IBAction func clickRegistBtn(sender: AnyObject) {
+        self.delegate?.noLoginViewDidClickRegistBtn()
+    }
+    
+    @IBAction func clickLoginBtn(sender: AnyObject) {
+        self.delegate?.noLoginViewDidClickLoginBtn()
     }
     
 }

@@ -21,6 +21,9 @@
 		0994824A1CB656530047D2F9 /* ZYNullVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099482491CB656530047D2F9 /* ZYNullVc.swift */; };
 		0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */; };
 		0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */; };
+		09D289521CC08F9400E60E46 /* ZYNoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D289511CC08F9400E60E46 /* ZYNoLoginView.swift */; };
+		09D289541CC08FA700E60E46 /* ZYNoLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */; };
+		09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D289591CC0989C00E60E46 /* UIView+AutoLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,11 @@
 		099482491CB656530047D2F9 /* ZYNullVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNullVc.swift; sourceTree = "<group>"; };
 		0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCommon.swift; sourceTree = "<group>"; };
 		0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYBaseTableVc.swift; sourceTree = "<group>"; };
+		09D289511CC08F9400E60E46 /* ZYNoLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNoLoginView.swift; sourceTree = "<group>"; };
+		09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYNoLoginView.xib; sourceTree = "<group>"; };
+		09D289571CC0989C00E60E46 /* WerBoForSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WerBoForSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		09D289581CC0989C00E60E46 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		09D289591CC0989C00E60E46 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */,
+				09D289561CC0988F00E60E46 /* Category */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -220,6 +229,8 @@
 		0974BD1C1CB505EC003D5541 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09D289511CC08F9400E60E46 /* ZYNoLoginView.swift */,
+				09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +349,16 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		09D289561CC0988F00E60E46 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				09D289581CC0989C00E60E46 /* UIView+AutoLayout.h */,
+				09D289591CC0989C00E60E46 /* UIView+AutoLayout.m */,
+				09D289571CC0989C00E60E46 /* WerBoForSwift-Bridging-Header.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,6 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D289541CC08FA700E60E46 /* ZYNoLoginView.xib in Resources */,
 				0974BD3A1CB50EAA003D5541 /* MainVCSettings.json in Resources */,
 				0974BCEA1CB5013C003D5541 /* Assets.xcassets in Resources */,
 			);
@@ -471,6 +493,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0994824A1CB656530047D2F9 /* ZYNullVc.swift in Sources */,
+				09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */,
+				09D289521CC08F9400E60E46 /* ZYNoLoginView.swift in Sources */,
 				0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */,
 				0974BD371CB50799003D5541 /* ZYProfileVc.swift in Sources */,
 				0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */,
@@ -603,11 +627,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WerBoForSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-111.WerBoForSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WerBoForSwift/Class/Common/Category/WerBoForSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -616,11 +643,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WerBoForSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-111.WerBoForSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WerBoForSwift/Class/Common/Category/WerBoForSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};

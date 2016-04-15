@@ -12,6 +12,7 @@ let kScreenWidth = UIScreen.mainScreen().bounds.size.width
 
 let kScreenHeight = UIScreen.mainScreen().bounds.size.height
 
+//命名空间
 let kSpaceName = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
 
 func ZYColor(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor

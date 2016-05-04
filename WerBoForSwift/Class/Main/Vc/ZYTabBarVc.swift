@@ -77,7 +77,7 @@ class ZYTabBarVc: UITabBarController {
     private func addChildsVc(vcStr: String, title: String, imageName: String)
     {
         //获取命名空间
-        print(kSpaceName);
+//        print(kSpaceName);
         
         let cla: AnyClass? = NSClassFromString(kSpaceName + "." + vcStr)
         

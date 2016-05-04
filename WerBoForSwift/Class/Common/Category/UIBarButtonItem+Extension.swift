@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIBarButtonItem {
-    class func barButtonWithImageName(imageName: String, target: AnyObject?, action: Selector) ->UIBarButtonItem
+    class func createBarButtonWithImageName(imageName: String, target: AnyObject?, action: Selector) ->UIBarButtonItem
     {
         let btn = UIButton()
         btn.setImage(UIImage(named: imageName), forState: UIControlState.Normal)

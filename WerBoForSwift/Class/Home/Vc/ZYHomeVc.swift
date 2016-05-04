@@ -8,29 +8,128 @@
 
 import UIKit
 
+class ZYRightImgBtn: UIButton{
+    
+    override func titleRectForContentRect(contentRect: CGRect) -> CGRect {
+        return CGRectMake(0, contentRect.origin.y, contentRect.size.width, contentRect.size.height)
+    }
+    
+    override func imageRectForContentRect(contentRect: CGRect) -> CGRect {
+        
+//        print(contentRect)
+        return CGRectMake(bounds.size.width - 13, (contentRect.size.height - 12) / 2, 13, 12)
+    }
+    
+
+}
+
 class ZYHomeVc: ZYBaseTableVc {
     
+    
+    //MARK: ----life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if (isLogin)
+        {
+            setupNavigationBar()
+            
+            //KVO监听poperAnimation对象中isPresenting的变化，相应改变箭头的方向
+            poperAnimation.addObserver(self, forKeyPath: "isPresenting", options: .New, context: nil)
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    deinit{
+        poperAnimation.removeObserver(self, forKeyPath: "isPresenting")
     }
-    */
+    
+    
+    //MARK: ----lazy
+    private lazy var poperVc: ZYPoperVc = ZYPoperVc(nibName: "ZYPoperVc", bundle: nil)
+    
+    private lazy var poperAnimation: ZYPoperAnimation = ZYPoperAnimation()
+    
+    private lazy var titleView: ZYRightImgBtn = {
+        let titleView = ZYRightImgBtn(type: UIButtonType.Custom)
+        titleView.adjustsImageWhenHighlighted = false
+        titleView.contentMode = UIViewContentMode.Center
+        titleView.titleLabel?.font = UIFont.boldSystemFontOfSize(18)
+        titleView.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        
+        titleView.setImage(UIImage(named: "navigationbar_arrow_down"), forState: UIControlState.Normal)
+        titleView.setImage(UIImage(named: "navigationbar_arrow_up"), forState: UIControlState.Selected)
+        
+        titleView.addTarget(self, action: "clickTitleView:", forControlEvents: UIControlEvents.TouchUpInside)
+        return titleView
+    }()
+    
+    //MARK: ----setup
+    private func setupNavigationBar()
+    {
+        navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonWithImageName("navigationbar_friendattention", target: self, action: "clickLeftItem")
+        navigationItem.rightBarButtonItem = UIBarButtonItem.createBarButtonWithImageName("navigationbar_pop", target: self, action: "clickRightItem")
+        
+        titleView.setTitle("沧海行舟", forState: UIControlState.Normal)
+        
+        titleView.sizeToFit()
+        titleView.frame.size.width += 5
+        navigationItem.titleView = titleView
+    }
+    
+    
+    //MARK: ----click
+    
+    @objc private func clickLeftItem()
+    {
+        print(__FUNCTION__)
+    }
+    
+    @objc private func clickRightItem()
+    {
+        print(__FUNCTION__)
+    }
 
+    @objc private func clickTitleView(titleView: ZYRightImgBtn)
+    {
+        titleView.selected = !titleView.selected
+        
+        if (titleView.selected)
+        {
+            //要自定义转场动画，那么首先要设置代理
+            poperVc.transitioningDelegate = poperAnimation
+            
+            poperAnimation.presentFrame = CGRectMake((kScreenWidth - 200) / 2, 55, 200, 250)
+            //然后设置为自定义动画
+            poperVc.modalPresentationStyle = UIModalPresentationStyle.Custom
+            
+            titleView.selected ? presentViewController(poperVc, animated: true, completion: nil) : dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
+    
+    //MARK: ----KVO处理
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        let tmpObj: ZYPoperAnimation? = object as? ZYPoperAnimation
+        if (keyPath == "isPresenting" && tmpObj != nil && tmpObj! == poperAnimation)
+        {
+            let isPresenting = change![NSKeyValueChangeNewKey] as? Bool
+            
+            if (isPresenting != nil && isPresenting == false)
+            {
+                titleView.selected = !titleView.selected
+            }
+            
+        }
+        else
+        {
+            super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
+        }
+    }
 }
+
+
+

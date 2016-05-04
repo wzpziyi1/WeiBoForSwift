@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09318AC71CD89C180065BAF9 /* ZYPoperVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09318AC51CD89C180065BAF9 /* ZYPoperVc.swift */; };
+		09318AC81CD89C180065BAF9 /* ZYPoperVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09318AC61CD89C180065BAF9 /* ZYPoperVc.xib */; };
+		09318ACA1CD89C610065BAF9 /* ZYPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09318AC91CD89C610065BAF9 /* ZYPresentationController.swift */; };
+		09318ACC1CD8A33B0065BAF9 /* ZYPoperAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09318ACB1CD8A33B0065BAF9 /* ZYPoperAnimation.swift */; };
 		0974BCE01CB5013C003D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BCDF1CB5013C003D5541 /* AppDelegate.swift */; };
 		0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0974BCE61CB5013C003D5541 /* WerBoForSwift.xcdatamodeld */; };
 		0974BCEA1CB5013C003D5541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0974BCE91CB5013C003D5541 /* Assets.xcassets */; };
@@ -21,6 +25,8 @@
 		0994824A1CB656530047D2F9 /* ZYNullVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099482491CB656530047D2F9 /* ZYNullVc.swift */; };
 		0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */; };
 		0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */; };
+		09CA83531CD9B02B009F1841 /* ZYQRCodeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA83511CD9B02B009F1841 /* ZYQRCodeVc.swift */; };
+		09CA83541CD9B02B009F1841 /* ZYQRCodeVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09CA83521CD9B02B009F1841 /* ZYQRCodeVc.xib */; };
 		09D289521CC08F9400E60E46 /* ZYNoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D289511CC08F9400E60E46 /* ZYNoLoginView.swift */; };
 		09D289541CC08FA700E60E46 /* ZYNoLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */; };
 		09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D289591CC0989C00E60E46 /* UIView+AutoLayout.m */; };
@@ -45,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09318AC51CD89C180065BAF9 /* ZYPoperVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPoperVc.swift; sourceTree = "<group>"; };
+		09318AC61CD89C180065BAF9 /* ZYPoperVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYPoperVc.xib; sourceTree = "<group>"; };
+		09318AC91CD89C610065BAF9 /* ZYPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPresentationController.swift; sourceTree = "<group>"; };
+		09318ACB1CD8A33B0065BAF9 /* ZYPoperAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPoperAnimation.swift; sourceTree = "<group>"; };
 		0974BCDC1CB5013B003D5541 /* WerBoForSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WerBoForSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0974BCDF1CB5013C003D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0974BCE71CB5013C003D5541 /* WerBoForSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WerBoForSwift.xcdatamodel; sourceTree = "<group>"; };
@@ -65,6 +75,8 @@
 		099482491CB656530047D2F9 /* ZYNullVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNullVc.swift; sourceTree = "<group>"; };
 		0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCommon.swift; sourceTree = "<group>"; };
 		0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYBaseTableVc.swift; sourceTree = "<group>"; };
+		09CA83511CD9B02B009F1841 /* ZYQRCodeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYQRCodeVc.swift; sourceTree = "<group>"; };
+		09CA83521CD9B02B009F1841 /* ZYQRCodeVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYQRCodeVc.xib; sourceTree = "<group>"; };
 		09D289511CC08F9400E60E46 /* ZYNoLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNoLoginView.swift; sourceTree = "<group>"; };
 		09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYNoLoginView.xib; sourceTree = "<group>"; };
 		09D289571CC0989C00E60E46 /* WerBoForSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WerBoForSwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -98,6 +110,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09318AC41CD89C180065BAF9 /* PopVc */ = {
+			isa = PBXGroup;
+			children = (
+				09318AC51CD89C180065BAF9 /* ZYPoperVc.swift */,
+				09318AC61CD89C180065BAF9 /* ZYPoperVc.xib */,
+				09318AC91CD89C610065BAF9 /* ZYPresentationController.swift */,
+				09318ACB1CD8A33B0065BAF9 /* ZYPoperAnimation.swift */,
+			);
+			path = PopVc;
+			sourceTree = "<group>";
+		};
 		0974BCD31CB5013B003D5541 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +246,8 @@
 		0974BD1B1CB505EC003D5541 /* Vc */ = {
 			isa = PBXGroup;
 			children = (
+				09CA83501CD9AFE5009F1841 /* QRCode */,
+				09318AC41CD89C180065BAF9 /* PopVc */,
 				0974BD2E1CB5070E003D5541 /* ZYHomeVc.swift */,
 			);
 			path = Vc;
@@ -351,6 +376,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		09CA83501CD9AFE5009F1841 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				09CA83511CD9B02B009F1841 /* ZYQRCodeVc.swift */,
+				09CA83521CD9B02B009F1841 /* ZYQRCodeVc.xib */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		09D289561CC0988F00E60E46 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,8 +503,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D289541CC08FA700E60E46 /* ZYNoLoginView.xib in Resources */,
+				09CA83541CD9B02B009F1841 /* ZYQRCodeVc.xib in Resources */,
 				0974BD3A1CB50EAA003D5541 /* MainVCSettings.json in Resources */,
 				0974BCEA1CB5013C003D5541 /* Assets.xcassets in Resources */,
+				09318AC81CD89C180065BAF9 /* ZYPoperVc.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,14 +532,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0994824A1CB656530047D2F9 /* ZYNullVc.swift in Sources */,
+				09CA83531CD9B02B009F1841 /* ZYQRCodeVc.swift in Sources */,
 				09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */,
 				09D289521CC08F9400E60E46 /* ZYNoLoginView.swift in Sources */,
 				0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */,
+				09318ACA1CD89C610065BAF9 /* ZYPresentationController.swift in Sources */,
 				0974BD371CB50799003D5541 /* ZYProfileVc.swift in Sources */,
 				0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */,
 				0974BCE01CB5013C003D5541 /* AppDelegate.swift in Sources */,
 				0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */,
 				0974BD2F1CB5070E003D5541 /* ZYHomeVc.swift in Sources */,
+				09318ACC1CD8A33B0065BAF9 /* ZYPoperAnimation.swift in Sources */,
+				09318AC71CD89C180065BAF9 /* ZYPoperVc.swift in Sources */,
 				0974BD311CB50726003D5541 /* ZYMessageVc.swift in Sources */,
 				0974BD331CB50741003D5541 /* ZYDiscoverVc.swift in Sources */,
 				0974BD2B1CB506D2003D5541 /* ZYTabBarVc.swift in Sources */,

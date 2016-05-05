@@ -38,6 +38,7 @@ class ZYHomeVc: ZYBaseTableVc {
             
             //KVO监听poperAnimation对象中isPresenting的变化，相应改变箭头的方向
             poperAnimation.addObserver(self, forKeyPath: "isPresenting", options: .New, context: nil)
+            
         }
         
     }
@@ -89,7 +90,9 @@ class ZYHomeVc: ZYBaseTableVc {
     
     @objc private func clickRightItem()
     {
-        print(__FUNCTION__)
+        let vc = ZYQRCodeVc(nibName: "ZYQRCodeVc", bundle: nil)
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc private func clickTitleView(titleView: ZYRightImgBtn)

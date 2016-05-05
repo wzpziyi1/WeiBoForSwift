@@ -4,6 +4,22 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WerBoForSwift/Class/Home/Vc/QRCode/ZYQRCodeVc.swift"
+            timestampString = "484113090.89729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "startScan()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
@@ -19,13 +35,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/View/ZYNoLoginView.swift"
-            timestampString = "482396162.792411"
+            filePath = "WerBoForSwift/Class/Home/Vc/QRCode/ZYWebDealVc.swift"
+            timestampString = "484125068.768952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "init(frame:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "ZYWebDealVc"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WerBoForSwift/Class/Home/Vc/QRCode/ZYWebDealVc.swift"
+            timestampString = "484126011.995454"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "setupWebView()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,13 +67,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/View/ZYNoLoginView.swift"
-            timestampString = "482396162.792411"
+            filePath = "WerBoForSwift/Class/Home/Vc/QRCode/ZYQRCodeVc.swift"
+            timestampString = "484128327.743237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "commitInit()"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -51,78 +83,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/Vc/PopVc/ZYPoperAnimation.swift"
-            timestampString = "483962666.20328"
+            filePath = "WerBoForSwift/Class/Home/Vc/QRCode/ZYQRCodeVc.swift"
+            timestampString = "484128959.612221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "animationControllerForPresentedController(_:presentingController:sourceController:)"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "startAnimation()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/Vc/PopVc/ZYPoperAnimation.swift"
-            timestampString = "483962667.363348"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "animationControllerForDismissedController(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/Vc/PopVc/ZYPoperAnimation.swift"
-            timestampString = "483962677.563768"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "animationControllerForPresentedController(_:presentingController:sourceController:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/Vc/ZYHomeVc.swift"
-            timestampString = "484027977.29603"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "observeValueForKeyPath(_:ofObject:change:context:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/Vc/ZYHomeVc.swift"
-            timestampString = "484027977.29603"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "observeValueForKeyPath(_:ofObject:change:context:)"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WerBoForSwift.ZYQRCodeVc.(startAnimation in _15BD356A69AE47D1690EDC74D8A5E97F) (WerBoForSwift.ZYQRCodeVc)() -&gt; ()"
+                  moduleName = "WerBoForSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangzhipan1/%E5%BE%AE%E4%BA%91%E5%90%8C%E6%AD%A5%E7%9B%98/oc%E7%A8%8B%E5%BA%8F/WerBoForSwift/WerBoForSwift/Class/Home/Vc/QRCode/ZYQRCodeVc.swift"
+                  timestampString = "484128551.967315"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WerBoForSwift.ZYQRCodeVc.((startAnimation in _15BD356A69AE47D1690EDC74D8A5E97F) (WerBoForSwift.ZYQRCodeVc) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "WerBoForSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wangzhipan1/%E5%BE%AE%E4%BA%91%E5%90%8C%E6%AD%A5%E7%9B%98/oc%E7%A8%8B%E5%BA%8F/WerBoForSwift/WerBoForSwift/Class/Home/Vc/QRCode/ZYQRCodeVc.swift"
+                  timestampString = "484128551.967546"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -29,6 +29,9 @@
 		09CA83541CD9B02B009F1841 /* ZYQRCodeVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09CA83521CD9B02B009F1841 /* ZYQRCodeVc.xib */; };
 		09CA835B1CDAF6F8009F1841 /* ZYWebDealVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA83591CDAF6F8009F1841 /* ZYWebDealVc.swift */; };
 		09CA835C1CDAF6F8009F1841 /* ZYWebDealVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09CA835A1CDAF6F8009F1841 /* ZYWebDealVc.xib */; };
+		09CA835F1CDB3E9E009F1841 /* ZYMyCardVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA835D1CDB3E9E009F1841 /* ZYMyCardVc.swift */; };
+		09CA83601CDB3E9E009F1841 /* ZYMyCardVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09CA835E1CDB3E9E009F1841 /* ZYMyCardVc.xib */; };
+		09CA83641CDB4E82009F1841 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CA83631CDB4E82009F1841 /* QuartzCore.framework */; };
 		09D289521CC08F9400E60E46 /* ZYNoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D289511CC08F9400E60E46 /* ZYNoLoginView.swift */; };
 		09D289541CC08FA700E60E46 /* ZYNoLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */; };
 		09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D289591CC0989C00E60E46 /* UIView+AutoLayout.m */; };
@@ -81,6 +84,9 @@
 		09CA83521CD9B02B009F1841 /* ZYQRCodeVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYQRCodeVc.xib; sourceTree = "<group>"; };
 		09CA83591CDAF6F8009F1841 /* ZYWebDealVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYWebDealVc.swift; sourceTree = "<group>"; };
 		09CA835A1CDAF6F8009F1841 /* ZYWebDealVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYWebDealVc.xib; sourceTree = "<group>"; };
+		09CA835D1CDB3E9E009F1841 /* ZYMyCardVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYMyCardVc.swift; sourceTree = "<group>"; };
+		09CA835E1CDB3E9E009F1841 /* ZYMyCardVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYMyCardVc.xib; sourceTree = "<group>"; };
+		09CA83631CDB4E82009F1841 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		09D289511CC08F9400E60E46 /* ZYNoLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNoLoginView.swift; sourceTree = "<group>"; };
 		09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYNoLoginView.xib; sourceTree = "<group>"; };
 		09D289571CC0989C00E60E46 /* WerBoForSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WerBoForSwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CA83641CDB4E82009F1841 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +135,7 @@
 		0974BCD31CB5013B003D5541 = {
 			isa = PBXGroup;
 			children = (
+				09CA83631CDB4E82009F1841 /* QuartzCore.framework */,
 				0974BCDE1CB5013C003D5541 /* WerBoForSwift */,
 				0974BCF61CB5013C003D5541 /* WerBoForSwiftTests */,
 				0974BD011CB5013C003D5541 /* WerBoForSwiftUITests */,
@@ -387,6 +395,8 @@
 				09CA83521CD9B02B009F1841 /* ZYQRCodeVc.xib */,
 				09CA83591CDAF6F8009F1841 /* ZYWebDealVc.swift */,
 				09CA835A1CDAF6F8009F1841 /* ZYWebDealVc.xib */,
+				09CA835D1CDB3E9E009F1841 /* ZYMyCardVc.swift */,
+				09CA835E1CDB3E9E009F1841 /* ZYMyCardVc.xib */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -512,6 +522,7 @@
 				09D289541CC08FA700E60E46 /* ZYNoLoginView.xib in Resources */,
 				09CA83541CD9B02B009F1841 /* ZYQRCodeVc.xib in Resources */,
 				0974BD3A1CB50EAA003D5541 /* MainVCSettings.json in Resources */,
+				09CA83601CDB3E9E009F1841 /* ZYMyCardVc.xib in Resources */,
 				0974BCEA1CB5013C003D5541 /* Assets.xcassets in Resources */,
 				09318AC81CD89C180065BAF9 /* ZYPoperVc.xib in Resources */,
 			);
@@ -540,6 +551,7 @@
 			files = (
 				0994824A1CB656530047D2F9 /* ZYNullVc.swift in Sources */,
 				09CA83531CD9B02B009F1841 /* ZYQRCodeVc.swift in Sources */,
+				09CA835F1CDB3E9E009F1841 /* ZYMyCardVc.swift in Sources */,
 				09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */,
 				09D289521CC08F9400E60E46 /* ZYNoLoginView.swift in Sources */,
 				0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */,

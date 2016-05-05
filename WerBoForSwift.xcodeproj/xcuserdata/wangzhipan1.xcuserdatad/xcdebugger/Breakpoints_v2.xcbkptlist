@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WerBoForSwift/Class/Home/Vc/QRCode/ZYQRCodeVc.swift"
-            timestampString = "484113090.89729"
+            timestampString = "484132325.39163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "startScan()"
             landmarkType = "5">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WerBoForSwift/Class/Home/Vc/QRCode/ZYQRCodeVc.swift"
-            timestampString = "484128959.612221"
+            timestampString = "484132325.39163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "startAnimation()"
             landmarkType = "5">
             <Locations>

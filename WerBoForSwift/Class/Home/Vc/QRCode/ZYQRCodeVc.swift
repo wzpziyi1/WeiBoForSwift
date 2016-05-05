@@ -52,10 +52,7 @@ class ZYQRCodeVc: UIViewController{
         session.stopRunning()
     }
     
-    //MARK: ----lazy
-    
-    
-    //MARK: --------二维码参数
+    //MARK: ----二维码参数
     
     private lazy var session: AVCaptureSession = AVCaptureSession()  ////输入输出的中间桥梁
     
@@ -109,6 +106,11 @@ class ZYQRCodeVc: UIViewController{
         openAlbum()
     }
     
+    @IBAction func clickMyCardBtn(sender: AnyObject) {
+        
+        let vc = ZYMyCardVc()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     //MARK: ----扫描二维码相关操作
     

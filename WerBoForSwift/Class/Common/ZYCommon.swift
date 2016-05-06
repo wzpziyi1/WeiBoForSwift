@@ -12,6 +12,9 @@ let kScreenWidth = UIScreen.mainScreen().bounds.size.width
 
 let kScreenHeight = UIScreen.mainScreen().bounds.size.height
 
+
+
+
 //命名空间
 let kSpaceName = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
 

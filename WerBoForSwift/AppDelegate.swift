@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible();
-        window?.rootViewController = ZYTabBarVc()
+        window?.rootViewController = ZYOAuthVC()
         return true
     }
 

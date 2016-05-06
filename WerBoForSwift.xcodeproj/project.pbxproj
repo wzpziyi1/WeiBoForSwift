@@ -11,6 +11,10 @@
 		09318AC81CD89C180065BAF9 /* ZYPoperVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09318AC61CD89C180065BAF9 /* ZYPoperVc.xib */; };
 		09318ACA1CD89C610065BAF9 /* ZYPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09318AC91CD89C610065BAF9 /* ZYPresentationController.swift */; };
 		09318ACC1CD8A33B0065BAF9 /* ZYPoperAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09318ACB1CD8A33B0065BAF9 /* ZYPoperAnimation.swift */; };
+		0964C6E01CDC9590008D45CC /* ZYNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6DF1CDC9590008D45CC /* ZYNetworkTool.swift */; };
+		0964C6E91CDC9FB4008D45CC /* ZYOAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6E81CDC9FB4008D45CC /* ZYOAuthVC.swift */; };
+		0964C6EB1CDCA008008D45CC /* ZYLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6EA1CDCA008008D45CC /* ZYLoginInfo.swift */; };
+		0964C6ED1CDCA1D8008D45CC /* ZYAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6EC1CDCA1D8008D45CC /* ZYAPI.swift */; };
 		0974BCE01CB5013C003D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974BCDF1CB5013C003D5541 /* AppDelegate.swift */; };
 		0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0974BCE61CB5013C003D5541 /* WerBoForSwift.xcdatamodeld */; };
 		0974BCEA1CB5013C003D5541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0974BCE91CB5013C003D5541 /* Assets.xcassets */; };
@@ -61,6 +65,10 @@
 		09318AC61CD89C180065BAF9 /* ZYPoperVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYPoperVc.xib; sourceTree = "<group>"; };
 		09318AC91CD89C610065BAF9 /* ZYPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPresentationController.swift; sourceTree = "<group>"; };
 		09318ACB1CD8A33B0065BAF9 /* ZYPoperAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPoperAnimation.swift; sourceTree = "<group>"; };
+		0964C6DF1CDC9590008D45CC /* ZYNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNetworkTool.swift; sourceTree = "<group>"; };
+		0964C6E81CDC9FB4008D45CC /* ZYOAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYOAuthVC.swift; sourceTree = "<group>"; };
+		0964C6EA1CDCA008008D45CC /* ZYLoginInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYLoginInfo.swift; sourceTree = "<group>"; };
+		0964C6EC1CDCA1D8008D45CC /* ZYAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYAPI.swift; sourceTree = "<group>"; };
 		0974BCDC1CB5013B003D5541 /* WerBoForSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WerBoForSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0974BCDF1CB5013C003D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0974BCE71CB5013C003D5541 /* WerBoForSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WerBoForSwift.xcdatamodel; sourceTree = "<group>"; };
@@ -137,6 +145,31 @@
 			path = PopVc;
 			sourceTree = "<group>";
 		};
+		0964C6E51CDC9FB4008D45CC /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				0964C6E71CDC9FB4008D45CC /* Vc */,
+				0964C6E61CDC9FB4008D45CC /* Model */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		0964C6E61CDC9FB4008D45CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0964C6EA1CDCA008008D45CC /* ZYLoginInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0964C6E71CDC9FB4008D45CC /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				0964C6E81CDC9FB4008D45CC /* ZYOAuthVC.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
 		0974BCD31CB5013B003D5541 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +233,7 @@
 				0974BD211CB505EC003D5541 /* Message */,
 				0974BD151CB505EC003D5541 /* Discover */,
 				0974BD251CB505EC003D5541 /* Profile */,
+				0964C6E51CDC9FB4008D45CC /* OAuth */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -208,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */,
+				0964C6EC1CDCA1D8008D45CC /* ZYAPI.swift */,
 				09D289561CC0988F00E60E46 /* Category */,
 			);
 			path = Common;
@@ -382,6 +417,7 @@
 		0974BD291CB505EC003D5541 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0964C6DF1CDC9590008D45CC /* ZYNetworkTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -628,11 +664,14 @@
 				09CA83531CD9B02B009F1841 /* ZYQRCodeVc.swift in Sources */,
 				09CA835F1CDB3E9E009F1841 /* ZYMyCardVc.swift in Sources */,
 				09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */,
+				0964C6ED1CDCA1D8008D45CC /* ZYAPI.swift in Sources */,
 				09D289521CC08F9400E60E46 /* ZYNoLoginView.swift in Sources */,
 				0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */,
 				09318ACA1CD89C610065BAF9 /* ZYPresentationController.swift in Sources */,
 				0974BD371CB50799003D5541 /* ZYProfileVc.swift in Sources */,
 				0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */,
+				0964C6E01CDC9590008D45CC /* ZYNetworkTool.swift in Sources */,
+				0964C6EB1CDCA008008D45CC /* ZYLoginInfo.swift in Sources */,
 				0974BCE01CB5013C003D5541 /* AppDelegate.swift in Sources */,
 				0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */,
 				09CA835B1CDAF6F8009F1841 /* ZYWebDealVc.swift in Sources */,
@@ -642,6 +681,7 @@
 				0974BD311CB50726003D5541 /* ZYMessageVc.swift in Sources */,
 				0974BD331CB50741003D5541 /* ZYDiscoverVc.swift in Sources */,
 				0974BD2B1CB506D2003D5541 /* ZYTabBarVc.swift in Sources */,
+				0964C6E91CDC9FB4008D45CC /* ZYOAuthVC.swift in Sources */,
 				09D2895C1CC0C0FB00E60E46 /* UIBarButtonItem+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,8 +12,14 @@ let kScreenWidth = UIScreen.mainScreen().bounds.size.width
 
 let kScreenHeight = UIScreen.mainScreen().bounds.size.height
 
+//Library目录
+let kLibraryPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomainMask.UserDomainMask, true).last
 
+//Document目录
+let kDocumentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last
 
+//Cache目录
+let kCachePath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last
 
 //命名空间
 let kSpaceName = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String

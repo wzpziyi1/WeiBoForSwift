@@ -54,7 +54,13 @@ class ZYOAuthVC: UIViewController {
         let params = ["client_id" : ZYXLAppKey, "client_secret" : ZYXLAppSecret, "grant_type" : "authorization_code", "code" : code, "redirect_uri" : ZYXLRedirectUri]
         
         ZYNetworkTool.sharedNetworkTool().POST(kApiAccessToken, parameters: params, success: { (_, json) -> Void in
-            print(json)
+            let dict = json as! Dictionary<String, AnyObject>
+            let info = ZYLoginInfo(dict: dict)
+            
+            ZYSaveTool.sharedSaveTool().writeLoginInfo(info)
+            
+            UIApplication.sharedApplication().keyWindow?.rootViewController = ZYTabBarVc()
+            
             }) { (_, error) -> Void in
                 print(error)
         }

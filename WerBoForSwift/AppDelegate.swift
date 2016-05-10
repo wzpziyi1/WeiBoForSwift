@@ -23,7 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible();
-        window?.rootViewController = ZYOAuthVC()
+        
+        let info: ZYLoginInfo? = ZYSaveTool.sharedSaveTool().readLoginInfo()
+        
+        if ((info == nil) || (info?.expireDate?.compare(NSDate()) == NSComparisonResult.OrderedAscending))
+        {
+            window?.rootViewController = ZYOAuthVC()
+        }
+        else
+        {
+            window?.rootViewController = ZYTabBarVc()
+        }
+        
+        
         return true
     }
 

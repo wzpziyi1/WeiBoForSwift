@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else
         {
-            window?.rootViewController = ZYTabBarVc()
+            window?.rootViewController = ZYNewfeatureVc()
         }
         
         
@@ -98,7 +98,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
             abort()
         }
-        
         return coordinator
     }()
 

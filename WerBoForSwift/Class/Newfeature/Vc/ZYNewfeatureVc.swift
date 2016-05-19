@@ -123,7 +123,7 @@ extension ZYNewfeatureVc: UIScrollViewDelegate {
             scrollView.contentOffset.x = kScreenWidth
             currentIndex = (currentIndex + 1 + images.count) % images.count
         }
-        if (currentIndex == 3)
+        if (currentIndex == images.count - 1)
         {
             enterBtn.hidden = false
         }

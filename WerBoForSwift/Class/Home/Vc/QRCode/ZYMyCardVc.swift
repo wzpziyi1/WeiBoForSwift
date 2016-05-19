@@ -43,9 +43,9 @@ class ZYMyCardVc: UIViewController {
     {
         navigationItem.title = "我的名片"
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Plain, target: self, action: "clickLeftItem")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYMyCardVc.clickLeftItem))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "分享", style: UIBarButtonItemStyle.Plain, target: self, action: "clickRightItem")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "分享", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYMyCardVc.clickRightItem))
     }
     
     
@@ -85,7 +85,7 @@ class ZYMyCardVc: UIViewController {
     
     @objc private func clickRightItem()
     {
-        print(__FUNCTION__)
+        print(#function)
     }
     
     //MARK: ----二维码相关操作

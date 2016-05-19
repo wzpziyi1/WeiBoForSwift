@@ -44,7 +44,7 @@ class ZYWebDealVc: UIViewController {
     
     private func setupNavigationBar()
     {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Plain, target: self, action: "clickLeftItem")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYWebDealVc.clickLeftItem))
     }
     
     private func setupWebView()

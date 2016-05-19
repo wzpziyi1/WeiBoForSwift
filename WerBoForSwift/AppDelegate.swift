@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -24,16 +23,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible();
         
-        let info: ZYLoginInfo? = ZYSaveTool.sharedSaveTool().readLoginInfo()
         
-        if ((info == nil) || (info?.expireDate?.compare(NSDate()) == NSComparisonResult.OrderedAscending))
+        
+        //取出上次登陆的信息，判断是否可以自动登陆
+        let info: ZYLoginInfo? = ZYSaveTool.sharedSaveTool().readLoginInfo()
+        if (!((info == nil) || (info?.expireDate?.compare(NSDate()) == NSComparisonResult.OrderedAscending)))
         {
-            window?.rootViewController = ZYOAuthVC()
+            
+            NSNotificationCenter.defaultCenter().postNotificationName(ZYIsLoginDidChangeNotification, object: nil, userInfo: [ZYIsLoginKey : NSNumber(bool: true)])
+        }
+        
+        //取出版本号，判断是否需要新特性
+        let newVersionStr = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"]
+        
+        let oldVersionStr = ZYSaveTool.sharedSaveTool().readAppVersion()
+        
+        if (oldVersionStr == nil || ((oldVersionStr!) != (newVersionStr as! String)))
+        {
+            ZYSaveTool.sharedSaveTool().writeAppVersion(newVersionStr as! String)
+            window?.rootViewController = ZYNewfeatureVc(nibName: "ZYNewfeatureVc", bundle: nil)
         }
         else
         {
-            window?.rootViewController = ZYNewfeatureVc()
+            window?.rootViewController = ZYTabBarVc()
         }
+        
         
         
         return true

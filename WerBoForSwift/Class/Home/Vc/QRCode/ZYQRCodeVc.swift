@@ -90,8 +90,8 @@ class ZYQRCodeVc: UIViewController{
     private func setupNavigationBar()
     {
         navigationItem.title = "扫一扫"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: UIBarButtonItemStyle.Plain, target: self, action: "clickLeftItem")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "相册", style: UIBarButtonItemStyle.Plain, target: self, action: "clickRightItem")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYQRCodeVc.clickLeftItem))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "相册", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYQRCodeVc.clickRightItem))
     }
     
     //MARK: ----click

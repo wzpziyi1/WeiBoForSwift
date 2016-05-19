@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WerBoForSwift/Class/OAuth/Vc/ZYOAuthVC.swift"
-            timestampString = "484222443.090545"
+            timestampString = "485320844.753733"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "fetchToken()"
             landmarkType = "5">
          </BreakpointContent>
@@ -73,13 +73,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/AppDelegate.swift"
-            timestampString = "484474934.766673"
+            filePath = "WerBoForSwift/Class/Main/Vc/ZYBaseTableVc.swift"
+            timestampString = "485322286.792875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "loginStatusDidChange(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

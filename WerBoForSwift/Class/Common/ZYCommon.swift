@@ -21,8 +21,11 @@ let kDocumentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.Do
 //Cache目录
 let kCachePath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last
 
+
 //命名空间
 let kSpaceName = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
+
+
 
 func ZYColor(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor
 {

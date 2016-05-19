@@ -19,7 +19,7 @@ class ZYPresentationController: UIPresentationController {
     private lazy var coverView: UIView = {
         let coverView = UIView(frame: CGRectMake(0, 0, kScreenWidth, kScreenHeight))
         coverView.backgroundColor = UIColor(white: 0, alpha: 0.3)
-        let tap = UITapGestureRecognizer(target: self, action: "clickCoverView")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ZYPresentationController.clickCoverView))
         
         coverView.addGestureRecognizer(tap)
         

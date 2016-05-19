@@ -10,7 +10,7 @@ import UIKit
 
 class ZYBaseTableVc: UITableViewController, ZYNoLoginViewDelegate {
 
-    var isLogin : Bool = true
+    var isLogin : Bool = false
     var noLoginView : ZYNoLoginView!
     
     //MARK: -life cycle
@@ -20,11 +20,18 @@ class ZYBaseTableVc: UITableViewController, ZYNoLoginViewDelegate {
 
         view.backgroundColor = UIColor.whiteColor()
         
+        setupNotification()
     }
     
     override func loadView()
     {
         isLogin ? super.loadView() : setupNoLoginView()
+    }
+    
+    
+    deinit
+    {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     //MARK: -setup系列
@@ -34,18 +41,37 @@ class ZYBaseTableVc: UITableViewController, ZYNoLoginViewDelegate {
         view = noLoginView
         noLoginView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight)
         noLoginView.delegate = self
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: UIBarButtonItemStyle.Plain, target: self, action: "clickLeftBarItem")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: UIBarButtonItemStyle.Plain, target: self, action: "clickRightBarItem")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYBaseTableVc.clickLeftBarItem))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYBaseTableVc.clickRightBarItem))
     }
+    
+    private func setupNotification()
+    {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ZYBaseTableVc.loginStatusDidChange(_:)), name: ZYIsLoginDidChangeNotification, object: nil)
+    }
+    
+    //MARK: ----Click
     
     @objc private func clickLeftBarItem()
     {
-        print(__FUNCTION__)
+        print(#function)
     }
     
     @objc private func clickRightBarItem()
     {
-        print(__FUNCTION__)
+        let vc = ZYOAuthVC()
+        let nvc = UINavigationController(rootViewController: vc)
+        presentViewController(nvc, animated: true, completion: nil)
+    }
+    
+    
+    //MARK: ----Notification
+    
+    func loginStatusDidChange(notification: NSNotification)
+    {
+        let value = notification.userInfo![ZYIsLoginKey] as! NSNumber
+        
+        isLogin = value.boolValue
     }
     
     //MARK: -ZYNoLoginViewDelegate

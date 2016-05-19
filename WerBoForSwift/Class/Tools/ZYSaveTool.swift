@@ -19,21 +19,37 @@ class ZYSaveTool: NSObject {
         return instance
     }
     
-    //登陆信息
+    //存储登陆信息
     func writeLoginInfo(info: ZYLoginInfo)
     {
         
-        let path = (kCachePath! as NSString).stringByAppendingPathComponent(self.infoFilename)
+        let path = self.infoFilename.cachePath()
         
         NSKeyedArchiver.archiveRootObject(info, toFile: path)
         
     }
-    
-    //登陆信息
+    //取出登陆信息
     func readLoginInfo() ->ZYLoginInfo?
     {
-        let path = (kCachePath! as NSString).stringByAppendingPathComponent(self.infoFilename)
+        let path = self.infoFilename.cachePath()
         return NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? ZYLoginInfo
         
+    }
+    
+    //存储app版本信息
+    func writeAppVersion(version: String)
+    {
+        let versionKey = "CFBundleVersion"
+        let userDefault = NSUserDefaults()
+        userDefault.setObject(version, forKey: versionKey)
+        userDefault.synchronize()
+    }
+    
+    //读取app版本信息
+    func readAppVersion() ->String?
+    {
+        let versionKey = "CFBundleVersion"
+        let userDefault = NSUserDefaults()
+        return (userDefault.objectForKey(versionKey) as? String)
     }
 }

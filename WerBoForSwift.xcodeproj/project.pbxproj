@@ -31,6 +31,8 @@
 		0994824A1CB656530047D2F9 /* ZYNullVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099482491CB656530047D2F9 /* ZYNullVc.swift */; };
 		0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */; };
 		0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */; };
+		09BC93D11CED5AA200AC6212 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC93D01CED5AA200AC6212 /* String+Extension.swift */; };
+		09BC93D51CED65F000AC6212 /* ZYConstKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC93D41CED65F000AC6212 /* ZYConstKey.swift */; };
 		09CA83531CD9B02B009F1841 /* ZYQRCodeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA83511CD9B02B009F1841 /* ZYQRCodeVc.swift */; };
 		09CA83541CD9B02B009F1841 /* ZYQRCodeVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09CA83521CD9B02B009F1841 /* ZYQRCodeVc.xib */; };
 		09CA835B1CDAF6F8009F1841 /* ZYWebDealVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA83591CDAF6F8009F1841 /* ZYWebDealVc.swift */; };
@@ -95,6 +97,8 @@
 		099482491CB656530047D2F9 /* ZYNullVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNullVc.swift; sourceTree = "<group>"; };
 		0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYCommon.swift; sourceTree = "<group>"; };
 		0994824D1CB662CC0047D2F9 /* ZYBaseTableVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYBaseTableVc.swift; sourceTree = "<group>"; };
+		09BC93D01CED5AA200AC6212 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		09BC93D41CED65F000AC6212 /* ZYConstKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYConstKey.swift; sourceTree = "<group>"; };
 		09CA83511CD9B02B009F1841 /* ZYQRCodeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYQRCodeVc.swift; sourceTree = "<group>"; };
 		09CA83521CD9B02B009F1841 /* ZYQRCodeVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYQRCodeVc.xib; sourceTree = "<group>"; };
 		09CA83591CDAF6F8009F1841 /* ZYWebDealVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYWebDealVc.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 			children = (
 				0994824B1CB65F9C0047D2F9 /* ZYCommon.swift */,
 				0964C6EC1CDCA1D8008D45CC /* ZYAPI.swift */,
+				09BC93D41CED65F000AC6212 /* ZYConstKey.swift */,
 				09D289561CC0988F00E60E46 /* Category */,
 			);
 			path = Common;
@@ -495,6 +500,7 @@
 				09D289591CC0989C00E60E46 /* UIView+AutoLayout.m */,
 				09D289571CC0989C00E60E46 /* WerBoForSwift-Bridging-Header.h */,
 				09D2895B1CC0C0FB00E60E46 /* UIBarButtonItem+Extension.swift */,
+				09BC93D01CED5AA200AC6212 /* String+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -719,11 +725,13 @@
 				0964C6EB1CDCA008008D45CC /* ZYLoginInfo.swift in Sources */,
 				0974BCE01CB5013C003D5541 /* AppDelegate.swift in Sources */,
 				0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */,
+				09BC93D51CED65F000AC6212 /* ZYConstKey.swift in Sources */,
 				09CA835B1CDAF6F8009F1841 /* ZYWebDealVc.swift in Sources */,
 				0974BD2F1CB5070E003D5541 /* ZYHomeVc.swift in Sources */,
 				09318ACC1CD8A33B0065BAF9 /* ZYPoperAnimation.swift in Sources */,
 				09318AC71CD89C180065BAF9 /* ZYPoperVc.swift in Sources */,
 				0974BD311CB50726003D5541 /* ZYMessageVc.swift in Sources */,
+				09BC93D11CED5AA200AC6212 /* String+Extension.swift in Sources */,
 				098937A31CE02ED300FC95BC /* ZYBaseModel.swift in Sources */,
 				0974BD331CB50741003D5541 /* ZYDiscoverVc.swift in Sources */,
 				0974BD2B1CB506D2003D5541 /* ZYTabBarVc.swift in Sources */,

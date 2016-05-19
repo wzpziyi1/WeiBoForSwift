@@ -32,7 +32,7 @@ class ZYTabBarVc: UITabBarController {
         btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: UIControlState.Normal)
         btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
         
-        btn.addTarget(self, action: "clickComposeBtn", forControlEvents: UIControlEvents.TouchUpInside)
+        btn.addTarget(self, action: #selector(ZYTabBarVc.clickComposeBtn), forControlEvents: UIControlEvents.TouchUpInside)
         return btn
     }()
     
@@ -94,12 +94,10 @@ class ZYTabBarVc: UITabBarController {
         addChildViewController(nvc)
     }
     
-    
-    
     //MARK: -click事件处理
     @objc private func clickComposeBtn()
     {
-        print(__FUNCTION__)
+        print(#function)
     }
     
 }

@@ -30,7 +30,15 @@ class ZYOAuthVC: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        setupNavigationBar()
+        
         setupWebView()
+        
+    }
+    
+    private func setupNavigationBar()
+    {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYOAuthVC.clickLeftItem))
         
     }
     
@@ -59,11 +67,18 @@ class ZYOAuthVC: UIViewController {
             
             ZYSaveTool.sharedSaveTool().writeLoginInfo(info)
             
-            UIApplication.sharedApplication().keyWindow?.rootViewController = ZYTabBarVc()
+            NSNotificationCenter.defaultCenter().postNotificationName(ZYIsLoginDidChangeNotification, object: nil, userInfo: [ZYIsLoginKey: NSNumber(bool: true)])
+            
+            self.clickLeftItem()
             
             }) { (_, error) -> Void in
                 print(error)
         }
+    }
+    
+    @objc private func clickLeftItem()
+    {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }

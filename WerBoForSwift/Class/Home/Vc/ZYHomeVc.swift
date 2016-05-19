@@ -63,15 +63,15 @@ class ZYHomeVc: ZYBaseTableVc {
         titleView.setImage(UIImage(named: "navigationbar_arrow_down"), forState: UIControlState.Normal)
         titleView.setImage(UIImage(named: "navigationbar_arrow_up"), forState: UIControlState.Selected)
         
-        titleView.addTarget(self, action: "clickTitleView:", forControlEvents: UIControlEvents.TouchUpInside)
+        titleView.addTarget(self, action: #selector(ZYHomeVc.clickTitleView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         return titleView
     }()
     
     //MARK: ----setup
     private func setupNavigationBar()
     {
-        navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonWithImageName("navigationbar_friendattention", target: self, action: "clickLeftItem")
-        navigationItem.rightBarButtonItem = UIBarButtonItem.createBarButtonWithImageName("navigationbar_pop", target: self, action: "clickRightItem")
+        navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonWithImageName("navigationbar_friendattention", target: self, action: #selector(ZYHomeVc.clickLeftItem))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.createBarButtonWithImageName("navigationbar_pop", target: self, action: #selector(ZYHomeVc.clickRightItem))
         
         titleView.setTitle("沧海行舟", forState: UIControlState.Normal)
         
@@ -85,7 +85,7 @@ class ZYHomeVc: ZYBaseTableVc {
     
     @objc private func clickLeftItem()
     {
-        print(__FUNCTION__)
+        print(#function)
     }
     
     @objc private func clickRightItem()

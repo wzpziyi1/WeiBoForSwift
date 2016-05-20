@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ZYOAuthVC: UIViewController {
 
@@ -67,9 +68,8 @@ class ZYOAuthVC: UIViewController {
             
             ZYSaveTool.sharedSaveTool().writeLoginInfo(info)
             
-            NSNotificationCenter.defaultCenter().postNotificationName(ZYIsLoginDidChangeNotification, object: nil, userInfo: [ZYIsLoginKey: NSNumber(bool: true)])
+            NSNotificationCenter.defaultCenter().postNotificationName(ZYDidLoginNotification, object: nil)
             
-            self.clickLeftItem()
             
             }) { (_, error) -> Void in
                 print(error)
@@ -100,6 +100,14 @@ extension ZYOAuthVC: UIWebViewDelegate {
         }
         
         return  true
+    }
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        SVProgressHUD.showInfoWithStatus("正在加载...", maskType: SVProgressHUDMaskType.Black)
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        SVProgressHUD.dismiss()
     }
     
 }

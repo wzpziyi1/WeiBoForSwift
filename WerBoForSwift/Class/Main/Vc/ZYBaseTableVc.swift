@@ -10,7 +10,7 @@ import UIKit
 
 class ZYBaseTableVc: UITableViewController, ZYNoLoginViewDelegate {
 
-    var isLogin : Bool = false
+    var isLogin : Bool = ZYSaveTool.sharedSaveTool().isLogin()
     var noLoginView : ZYNoLoginView!
     
     //MARK: -life cycle
@@ -20,7 +20,6 @@ class ZYBaseTableVc: UITableViewController, ZYNoLoginViewDelegate {
 
         view.backgroundColor = UIColor.whiteColor()
         
-        setupNotification()
     }
     
     override func loadView()
@@ -45,10 +44,6 @@ class ZYBaseTableVc: UITableViewController, ZYNoLoginViewDelegate {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ZYBaseTableVc.clickRightBarItem))
     }
     
-    private func setupNotification()
-    {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ZYBaseTableVc.loginStatusDidChange(_:)), name: ZYIsLoginDidChangeNotification, object: nil)
-    }
     
     //MARK: ----Click
     
@@ -65,14 +60,6 @@ class ZYBaseTableVc: UITableViewController, ZYNoLoginViewDelegate {
     }
     
     
-    //MARK: ----Notification
-    
-    func loginStatusDidChange(notification: NSNotification)
-    {
-        let value = notification.userInfo![ZYIsLoginKey] as! NSNumber
-        
-        isLogin = value.boolValue
-    }
     
     //MARK: -ZYNoLoginViewDelegate
     func noLoginViewDidClickRegistBtn()

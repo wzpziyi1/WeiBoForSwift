@@ -20,7 +20,6 @@ class ZYRightImgBtn: UIButton{
         return CGRectMake(bounds.size.width - 13, (contentRect.size.height - 12) / 2, 13, 12)
     }
     
-
 }
 
 class ZYHomeVc: ZYBaseTableVc {

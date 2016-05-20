@@ -7,3 +7,6 @@ platform :ios, '8.0'
 use_frameworks!
 pod 'SDWebImage', '~>3.7'
 
+pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+
+

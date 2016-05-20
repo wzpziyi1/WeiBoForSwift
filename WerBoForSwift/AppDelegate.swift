@@ -24,14 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible();
         
         
-        
-        //取出上次登陆的信息，判断是否可以自动登陆
-        let info: ZYLoginInfo? = ZYSaveTool.sharedSaveTool().readLoginInfo()
-        if (!((info == nil) || (info?.expireDate?.compare(NSDate()) == NSComparisonResult.OrderedAscending)))
-        {
-            
-            NSNotificationCenter.defaultCenter().postNotificationName(ZYIsLoginDidChangeNotification, object: nil, userInfo: [ZYIsLoginKey : NSNumber(bool: true)])
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.loginDidChange(_:)), name: ZYDidLoginNotification, object: nil)
         
         //取出版本号，判断是否需要新特性
         let newVersionStr = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"]
@@ -48,9 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = ZYTabBarVc()
         }
         
-        
-        
         return true
+    }
+    
+    @objc private func loginDidChange(note: NSNotification)
+    {
+        window?.rootViewController = ZYWelcomeVc()
     }
 
     func applicationWillResignActive(application: UIApplication) {

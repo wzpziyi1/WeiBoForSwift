@@ -39,6 +39,7 @@ class ZYLoginInfo: ZYBaseModel {
         aDecoder.decodeObjectForKey("access_token")
         aDecoder.decodeObjectForKey("expires_in")
         aDecoder.decodeObjectForKey("uid")
+        aDecoder.decodeObjectForKey("expireDate")
     }
     
     override func encodeWithCoder(aCoder: NSCoder) {
@@ -47,6 +48,7 @@ class ZYLoginInfo: ZYBaseModel {
         aCoder.encodeObject(access_token, forKey: "access_token")
         aCoder.encodeObject(expires_in, forKey: "expires_in")
         aCoder.encodeObject(uid, forKey: "uid")
+        aCoder.encodeObject(expireDate, forKey: "expireDate")
     }
 }
 

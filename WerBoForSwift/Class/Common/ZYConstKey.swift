@@ -8,6 +8,4 @@
 
 import UIKit
 
-let ZYIsLoginDidChangeNotification = "ZYIsLoginDidChangeNotification"
-
-let ZYIsLoginKey = "ZYIsLoginKey"
+let ZYDidLoginNotification = "ZYDidLoginNotification"

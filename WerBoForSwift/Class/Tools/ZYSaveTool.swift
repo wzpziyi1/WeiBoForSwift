@@ -44,7 +44,7 @@ class ZYSaveTool: NSObject{
             return false
         }
         
-        if (!((loginInfo == nil) || (loginInfo?.expireDate?.compare(NSDate()) == NSComparisonResult.OrderedAscending)))
+        if (((loginInfo == nil) || (loginInfo?.expireDate?.compare(NSDate()) == NSComparisonResult.OrderedAscending)))
         {
             return false
         }

@@ -18,14 +18,15 @@ class ZYWelcomeVc: UIViewController {
 
         // Do any additional setup after loading the view.
         
+//        welcomeBtn.center.x = (kScreenWidth - welcomeBtn.frame.size.width) / 2
+//        welcomeBtn.frame.origin.y = 300
+        
+        beginAnimation()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        welcomeBtn.center.x = view.center.x
-        welcomeBtn.frame.origin.y = 200
-        
-        beginAnimation()
     }
 
     override func didReceiveMemoryWarning() {

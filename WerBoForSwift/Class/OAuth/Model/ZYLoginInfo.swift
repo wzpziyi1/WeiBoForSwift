@@ -36,10 +36,10 @@ class ZYLoginInfo: ZYBaseModel {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        aDecoder.decodeObjectForKey("access_token")
-        aDecoder.decodeObjectForKey("expires_in")
-        aDecoder.decodeObjectForKey("uid")
-        aDecoder.decodeObjectForKey("expireDate")
+        access_token = aDecoder.decodeObjectForKey("access_token") as? String
+        expires_in = aDecoder.decodeObjectForKey("expires_in") as? NSNumber
+        uid = aDecoder.decodeObjectForKey("uid") as? String
+        expireDate = aDecoder.decodeObjectForKey("expireDate") as? NSDate
     }
     
     override func encodeWithCoder(aCoder: NSCoder) {

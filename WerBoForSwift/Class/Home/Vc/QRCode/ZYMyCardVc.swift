@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ZYMyCardVc: UIViewController {
 
@@ -69,7 +70,26 @@ class ZYMyCardVc: UIViewController {
         let bgImage = createNonInterpolatedUIImageFormCIImage(ciImage!, size: 400)
         
         // 创建一个头像
-        let icon = UIImage(named: "mine")
+        let urlStr = ZYSaveTool.sharedSaveTool().readUserInfo()?.avatar_large
+        var icon: UIImage!
+        if (urlStr == nil)
+        {
+            icon = UIImage(named: "avatar_default_big")
+        }
+        else
+        {
+            let isExisting = SDWebImageManager.sharedManager().diskImageExistsForURL(NSURL(string: urlStr!))
+            if (isExisting)
+            {
+                icon = SDImageCache.sharedImageCache().imageFromDiskCacheForKey(urlStr!)
+            }
+            else
+            {
+                icon = UIImage(named: "avatar_default_big")
+            }
+        }
+        
+        iconView.image = icon
         
         dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
             // 合成图片(将二维码和头像进行合并)

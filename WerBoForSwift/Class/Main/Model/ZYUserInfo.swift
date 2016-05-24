@@ -11,9 +11,11 @@ import UIKit
 class ZYUserInfo: ZYBaseModel {
     
     var id: NSNumber?
-    var screen_name: String?
-    var avatar_large: String?   //大图url
-    var profile_image_url: String? //头像url
+    var screen_name: String?                        //昵称
+    var avatar_large: String?                       //大图url
+    var profile_image_url: String?                  //头像url
+    
+    var verified: NSNumber?                         //是否是微博认证用户，即加V用户，true：是，false：否
     
     override init(dict: Dictionary<String, AnyObject>) {
         super.init(dict: dict)

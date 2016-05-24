@@ -11,6 +11,9 @@
 		09318AC81CD89C180065BAF9 /* ZYPoperVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09318AC61CD89C180065BAF9 /* ZYPoperVc.xib */; };
 		09318ACA1CD89C610065BAF9 /* ZYPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09318AC91CD89C610065BAF9 /* ZYPresentationController.swift */; };
 		09318ACC1CD8A33B0065BAF9 /* ZYPoperAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09318ACB1CD8A33B0065BAF9 /* ZYPoperAnimation.swift */; };
+		095030031CF4383A0056D6F7 /* ZYStatusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095030021CF4383A0056D6F7 /* ZYStatusInfo.swift */; };
+		095030061CF43AD30056D6F7 /* ZYHomeNetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095030051CF43AD30056D6F7 /* ZYHomeNetTool.swift */; };
+		095030081CF4435E0056D6F7 /* ZYPicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095030071CF4435E0056D6F7 /* ZYPicInfo.swift */; };
 		0964C6E01CDC9590008D45CC /* ZYNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6DF1CDC9590008D45CC /* ZYNetworkTool.swift */; };
 		0964C6E91CDC9FB4008D45CC /* ZYOAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6E81CDC9FB4008D45CC /* ZYOAuthVC.swift */; };
 		0964C6EB1CDCA008008D45CC /* ZYLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6EA1CDCA008008D45CC /* ZYLoginInfo.swift */; };
@@ -74,6 +77,9 @@
 		09318AC61CD89C180065BAF9 /* ZYPoperVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYPoperVc.xib; sourceTree = "<group>"; };
 		09318AC91CD89C610065BAF9 /* ZYPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPresentationController.swift; sourceTree = "<group>"; };
 		09318ACB1CD8A33B0065BAF9 /* ZYPoperAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPoperAnimation.swift; sourceTree = "<group>"; };
+		095030021CF4383A0056D6F7 /* ZYStatusInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYStatusInfo.swift; sourceTree = "<group>"; };
+		095030051CF43AD30056D6F7 /* ZYHomeNetTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYHomeNetTool.swift; sourceTree = "<group>"; };
+		095030071CF4435E0056D6F7 /* ZYPicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPicInfo.swift; sourceTree = "<group>"; };
 		0964C6DF1CDC9590008D45CC /* ZYNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNetworkTool.swift; sourceTree = "<group>"; };
 		0964C6E81CDC9FB4008D45CC /* ZYOAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYOAuthVC.swift; sourceTree = "<group>"; };
 		0964C6EA1CDCA008008D45CC /* ZYLoginInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYLoginInfo.swift; sourceTree = "<group>"; };
@@ -161,6 +167,14 @@
 				09318ACB1CD8A33B0065BAF9 /* ZYPoperAnimation.swift */,
 			);
 			path = PopVc;
+			sourceTree = "<group>";
+		};
+		095030041CF43A890056D6F7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				095030051CF43AD30056D6F7 /* ZYHomeNetTool.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		0964C6E51CDC9FB4008D45CC /* OAuth */ = {
@@ -303,6 +317,7 @@
 		0974BD191CB505EC003D5541 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				095030041CF43A890056D6F7 /* Tool */,
 				0974BD1A1CB505EC003D5541 /* Model */,
 				0974BD1B1CB505EC003D5541 /* Vc */,
 				0974BD1C1CB505EC003D5541 /* View */,
@@ -313,6 +328,8 @@
 		0974BD1A1CB505EC003D5541 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				095030021CF4383A0056D6F7 /* ZYStatusInfo.swift */,
+				095030071CF4435E0056D6F7 /* ZYPicInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -731,11 +748,14 @@
 				09318ACA1CD89C610065BAF9 /* ZYPresentationController.swift in Sources */,
 				0974BD371CB50799003D5541 /* ZYProfileVc.swift in Sources */,
 				0994824C1CB65F9C0047D2F9 /* ZYCommon.swift in Sources */,
+				095030081CF4435E0056D6F7 /* ZYPicInfo.swift in Sources */,
 				09BEF4BF1CEEE38F00651544 /* ZYWelcomeVc.swift in Sources */,
 				0964C6E01CDC9590008D45CC /* ZYNetworkTool.swift in Sources */,
 				0964C6EB1CDCA008008D45CC /* ZYLoginInfo.swift in Sources */,
 				0974BCE01CB5013C003D5541 /* AppDelegate.swift in Sources */,
 				0994824E1CB662CC0047D2F9 /* ZYBaseTableVc.swift in Sources */,
+				095030061CF43AD30056D6F7 /* ZYHomeNetTool.swift in Sources */,
+				095030031CF4383A0056D6F7 /* ZYStatusInfo.swift in Sources */,
 				09BC93D51CED65F000AC6212 /* ZYConstKey.swift in Sources */,
 				09CA835B1CDAF6F8009F1841 /* ZYWebDealVc.swift in Sources */,
 				0974BD2F1CB5070E003D5541 /* ZYHomeVc.swift in Sources */,

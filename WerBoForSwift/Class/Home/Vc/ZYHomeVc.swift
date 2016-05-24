@@ -24,6 +24,9 @@ class ZYRightImgBtn: UIButton{
 
 class ZYHomeVc: ZYBaseTableVc {
     
+    let accountInfo = ZYSaveTool.sharedSaveTool().readUserInfo()
+    let loginInfo = ZYSaveTool.sharedSaveTool().readLoginInfo()
+    
     
     //MARK: ----life cycle
     override func viewDidLoad() {
@@ -72,7 +75,7 @@ class ZYHomeVc: ZYBaseTableVc {
         navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonWithImageName("navigationbar_friendattention", target: self, action: #selector(ZYHomeVc.clickLeftItem))
         navigationItem.rightBarButtonItem = UIBarButtonItem.createBarButtonWithImageName("navigationbar_pop", target: self, action: #selector(ZYHomeVc.clickRightItem))
         
-        titleView.setTitle("沧海行舟", forState: UIControlState.Normal)
+        titleView.setTitle(accountInfo?.screen_name, forState: UIControlState.Normal)
         
         titleView.sizeToFit()
         titleView.frame.size.width += 5

@@ -41,6 +41,7 @@ class ZYHomeVc: ZYBaseTableVc {
             //KVO监听poperAnimation对象中isPresenting的变化，相应改变箭头的方向
             poperAnimation.addObserver(self, forKeyPath: "isPresenting", options: .New, context: nil)
             
+            tableView.registerNib(UINib.init(nibName: "ZYStatusCell", bundle: nil), forCellReuseIdentifier: "ZYStatusCell")
         }
         
     }
@@ -134,7 +135,25 @@ class ZYHomeVc: ZYBaseTableVc {
             super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
         }
     }
+    
+    
+    //MARK: ----网络交互
+    
+    
+    //MARK: ----TableViewDataSource
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCellWithIdentifier("ZYStatusCell", forIndexPath: indexPath)
+    }
+    
 }
-
 
 

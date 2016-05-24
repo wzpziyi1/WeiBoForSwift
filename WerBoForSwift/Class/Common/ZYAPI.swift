@@ -10,3 +10,6 @@ import UIKit
 
 //OAuth2的access_token接口
 let kApiAccessToken = "oauth2/access_token"
+
+//用户信息接口
+let kApiUserInfo = "2/users/show.json"

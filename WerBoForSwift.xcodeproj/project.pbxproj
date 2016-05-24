@@ -46,6 +46,7 @@
 		09D289541CC08FA700E60E46 /* ZYNoLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */; };
 		09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D289591CC0989C00E60E46 /* UIView+AutoLayout.m */; };
 		09D2895C1CC0C0FB00E60E46 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2895B1CC0C0FB00E60E46 /* UIBarButtonItem+Extension.swift */; };
+		09E9ED341CF409C300029891 /* ZYUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9ED331CF409C300029891 /* ZYUserInfo.swift */; };
 		09FB85E31CE31196003EC59C /* ZYNewfeatureVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB85E11CE31196003EC59C /* ZYNewfeatureVc.swift */; };
 		09FB85E41CE31196003EC59C /* ZYNewfeatureVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FB85E21CE31196003EC59C /* ZYNewfeatureVc.xib */; };
 		3A138A04155404DB3A2BA40D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5570DCBA7A7DEA16E2028FCF /* Pods.framework */; };
@@ -116,6 +117,7 @@
 		09D289581CC0989C00E60E46 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
 		09D289591CC0989C00E60E46 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 		09D2895B1CC0C0FB00E60E46 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		09E9ED331CF409C300029891 /* ZYUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYUserInfo.swift; sourceTree = "<group>"; };
 		09FB85E11CE31196003EC59C /* ZYNewfeatureVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNewfeatureVc.swift; sourceTree = "<group>"; };
 		09FB85E21CE31196003EC59C /* ZYNewfeatureVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYNewfeatureVc.xib; sourceTree = "<group>"; };
 		2CE7F297901C6C900F6C21BB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				098937A21CE02ED300FC95BC /* ZYBaseModel.swift */,
+				09E9ED331CF409C300029891 /* ZYUserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				09318ACC1CD8A33B0065BAF9 /* ZYPoperAnimation.swift in Sources */,
 				09318AC71CD89C180065BAF9 /* ZYPoperVc.swift in Sources */,
 				0974BD311CB50726003D5541 /* ZYMessageVc.swift in Sources */,
+				09E9ED341CF409C300029891 /* ZYUserInfo.swift in Sources */,
 				09BC93D11CED5AA200AC6212 /* String+Extension.swift in Sources */,
 				098937A31CE02ED300FC95BC /* ZYBaseModel.swift in Sources */,
 				0974BD331CB50741003D5541 /* ZYDiscoverVc.swift in Sources */,

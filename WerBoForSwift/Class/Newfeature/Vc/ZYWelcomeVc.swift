@@ -7,27 +7,33 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ZYWelcomeVc: UIViewController {
 
 
     @IBOutlet weak var welcomeBtn: UIButton!
     
+    @IBOutlet weak var iconView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-//        welcomeBtn.center.x = (kScreenWidth - welcomeBtn.frame.size.width) / 2
-//        welcomeBtn.frame.origin.y = 300
+        let userInfo = ZYSaveTool.sharedSaveTool().readUserInfo()
+        
+        iconView.layer.cornerRadius = iconView.frame.size.width / 2
+        iconView.layer.masksToBounds = true
+        
+        if (userInfo!.avatar_large != nil)
+        {
+            iconView.sd_setImageWithURL(NSURL(string: userInfo!.avatar_large!), placeholderImage: UIImage(named: "avatar_default_big"))
+        }
+        
         
         beginAnimation()
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

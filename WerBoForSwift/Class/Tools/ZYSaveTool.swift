@@ -68,4 +68,19 @@ class ZYSaveTool: NSObject{
         let userDefault = NSUserDefaults()
         return (userDefault.objectForKey(versionKey) as? String)
     }
+    
+    //存储用户信息
+    func writeUserInfo(info: ZYUserInfo)
+    {
+        let path = "UserInfo.plist".cachePath()
+        NSKeyedArchiver.archiveRootObject(info, toFile: path)
+    }
+    
+    //读取用户信息
+    func readUserInfo()-> ZYUserInfo?
+    {
+        let path = "UserInfo.plist".cachePath()
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? ZYUserInfo
+    }
+    
 }

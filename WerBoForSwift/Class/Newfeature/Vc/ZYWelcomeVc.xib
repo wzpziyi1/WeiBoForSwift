@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZYWelcomeVc" customModule="WerBoForSwift" customModuleProvider="target">
             <connections>
+                <outlet property="iconView" destination="9UJ-5F-j3Z" id="UCZ-SB-puc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeBtn" destination="OE1-h4-ck4" id="uwF-aC-dRX"/>
             </connections>
@@ -20,11 +21,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE1-h4-ck4">
-                    <rect key="frame" x="60" y="300" width="200" height="40"/>
+                    <rect key="frame" x="60" y="270" width="200" height="40"/>
                     <color key="backgroundColor" red="0.99215686270000003" green="0.51372549020000002" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="YOg-fV-tzf"/>
-                        <constraint firstAttribute="width" constant="200" id="zaZ-P3-c6O"/>
+                        <constraint firstAttribute="height" constant="40" id="Wrc-7D-blr"/>
+                        <constraint firstAttribute="width" constant="200" id="kIc-oo-GNZ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="欢迎回来">
@@ -34,20 +35,30 @@
                         <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="yXc-4W-kby"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="9UJ-5F-j3Z">
+                    <rect key="frame" x="100" y="100" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="1Ph-Qt-iEQ"/>
+                        <constraint firstAttribute="width" constant="120" id="OpD-AA-his"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="OE1-h4-ck4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7zq-n7-nS2"/>
+                <constraint firstItem="9UJ-5F-j3Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="0gz-vs-lzY"/>
                 <constraint firstAttribute="trailing" secondItem="AmU-RG-1Bn" secondAttribute="trailing" id="Lck-US-L9g"/>
                 <constraint firstItem="AmU-RG-1Bn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NeF-30-SaL"/>
+                <constraint firstItem="OE1-h4-ck4" firstAttribute="top" secondItem="9UJ-5F-j3Z" secondAttribute="bottom" constant="50" id="QGT-ni-KQw"/>
                 <constraint firstAttribute="bottom" secondItem="AmU-RG-1Bn" secondAttribute="bottom" id="Tlf-86-abx"/>
                 <constraint firstItem="AmU-RG-1Bn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dLh-dd-hr8"/>
-                <constraint firstItem="OE1-h4-ck4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="300" id="pTX-ru-Pso"/>
+                <constraint firstItem="OE1-h4-ck4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vgs-lU-qno"/>
+                <constraint firstItem="9UJ-5F-j3Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wcr-Sn-uVv"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
         <image name="ad_background" width="320" height="480"/>
+        <image name="avatar_default_big" width="85" height="85"/>
     </resources>
 </document>

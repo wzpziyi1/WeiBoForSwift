@@ -63,12 +63,27 @@ class ZYOAuthVC: UIViewController {
         let params = ["client_id" : ZYXLAppKey, "client_secret" : ZYXLAppSecret, "grant_type" : "authorization_code", "code" : code, "redirect_uri" : ZYXLRedirectUri]
         
         ZYNetworkTool.sharedNetworkTool().POST(kApiAccessToken, parameters: params, success: { (_, json) -> Void in
-            let dict = json as! Dictionary<String, AnyObject>
-            let info = ZYLoginInfo(dict: dict)
+            let infoDict = json as! Dictionary<String, AnyObject>
+            let info = ZYLoginInfo(dict: infoDict)
             
             ZYSaveTool.sharedSaveTool().writeLoginInfo(info)
             
-            NSNotificationCenter.defaultCenter().postNotificationName(ZYDidLoginNotification, object: nil)
+            let params = ["access_token": info.access_token!, "uid": info.uid!]
+            
+            ZYNetworkTool.sharedNetworkTool().GET(kApiUserInfo, parameters: params, success: { (_, json) in
+                
+                let userDict = json as! Dictionary<String, AnyObject>
+                let userInfo = ZYUserInfo(dict: userDict)
+                
+                ZYSaveTool.sharedSaveTool().writeUserInfo(userInfo)
+                
+                NSNotificationCenter.defaultCenter().postNotificationName(ZYDidLoginNotification, object: nil)
+                
+                }, failure: { (_, error) in
+                    print(error)
+            })
+            
+            
             
             
             }) { (_, error) -> Void in

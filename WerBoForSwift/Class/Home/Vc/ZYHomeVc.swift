@@ -27,6 +27,9 @@ class ZYHomeVc: ZYBaseTableVc {
     let accountInfo = ZYSaveTool.sharedSaveTool().readUserInfo()
     let loginInfo = ZYSaveTool.sharedSaveTool().readLoginInfo()
     
+    let cellIdentifier = "ZYStatusCell"
+    
+    let commonCell: ZYStatusCell = NSBundle.mainBundle().loadNibNamed("ZYStatusCell", owner: nil, options: nil).last as! ZYStatusCell
     
     //MARK: ----life cycle
     override func viewDidLoad() {
@@ -41,7 +44,10 @@ class ZYHomeVc: ZYBaseTableVc {
             //KVO监听poperAnimation对象中isPresenting的变化，相应改变箭头的方向
             poperAnimation.addObserver(self, forKeyPath: "isPresenting", options: .New, context: nil)
             
-            tableView.registerNib(UINib.init(nibName: "ZYStatusCell", bundle: nil), forCellReuseIdentifier: "ZYStatusCell")
+            tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+            tableView.registerNib(UINib.init(nibName: "ZYStatusCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+            
+            loadMoreStatus()
         }
         
     }
@@ -69,6 +75,9 @@ class ZYHomeVc: ZYBaseTableVc {
         titleView.addTarget(self, action: #selector(ZYHomeVc.clickTitleView(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         return titleView
     }()
+    
+    //所有微博
+    private lazy var statusInfos = Array<ZYStatusInfo>()
     
     //MARK: ----setup
     private func setupNavigationBar()
@@ -138,7 +147,40 @@ class ZYHomeVc: ZYBaseTableVc {
     
     
     //MARK: ----网络交互
-    
+    func loadMoreStatus()
+    {
+        
+        let params = ["access_token": loginInfo!.access_token!, "count": NSNumber(int: 20)]
+        
+        ZYHomeNetTool.fetchStatusInfosWithParams(params, succeed: { (result) in
+                if (result != nil && result?.count != 0)
+                {
+                    if (self.statusInfos.count == 0)
+                    {
+                        for item in result! {
+                            self.statusInfos.append(item)
+                        }
+                    }
+                    else
+                    {
+                        var tempArray = Array<ZYStatusInfo>()
+                        for item in result! {
+                            tempArray.append(item)
+                        }
+                        
+                        for item in self.statusInfos {
+                            tempArray.append(item)
+                        }
+                        self.statusInfos = tempArray
+                    }
+                    
+                }
+                self.tableView.reloadData()
+            }) { (error) in
+                print(error)
+        }
+        
+    }
     
     //MARK: ----TableViewDataSource
     
@@ -147,11 +189,28 @@ class ZYHomeVc: ZYBaseTableVc {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return statusInfos.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCellWithIdentifier("ZYStatusCell", forIndexPath: indexPath)
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ZYStatusCell
+        
+        cell.statusInfo = statusInfos[indexPath.row]
+        
+        return cell
+    }
+    
+    //MARK: ----TableViewDelegate
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        commonCell.statusInfo = statusInfos[indexPath.row]
+        let height = commonCell.fetchHeightFromCell()
+        return height
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
 }

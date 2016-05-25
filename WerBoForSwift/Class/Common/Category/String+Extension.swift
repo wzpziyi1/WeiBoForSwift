@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 extension String {
     
     func cachePath() ->String

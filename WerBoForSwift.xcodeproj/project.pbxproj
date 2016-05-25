@@ -16,6 +16,8 @@
 		095030081CF4435E0056D6F7 /* ZYPicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095030071CF4435E0056D6F7 /* ZYPicInfo.swift */; };
 		0950300D1CF456790056D6F7 /* ZYStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950300B1CF456790056D6F7 /* ZYStatusCell.swift */; };
 		0950300E1CF456790056D6F7 /* ZYStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0950300C1CF456790056D6F7 /* ZYStatusCell.xib */; };
+		095030101CF54FC80056D6F7 /* ZYBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0950300F1CF54FC80056D6F7 /* ZYBottomView.swift */; };
+		095030121CF54FE90056D6F7 /* ZYBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095030111CF54FE90056D6F7 /* ZYBottomView.xib */; };
 		0964C6E01CDC9590008D45CC /* ZYNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6DF1CDC9590008D45CC /* ZYNetworkTool.swift */; };
 		0964C6E91CDC9FB4008D45CC /* ZYOAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6E81CDC9FB4008D45CC /* ZYOAuthVC.swift */; };
 		0964C6EB1CDCA008008D45CC /* ZYLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0964C6EA1CDCA008008D45CC /* ZYLoginInfo.swift */; };
@@ -84,6 +86,8 @@
 		095030071CF4435E0056D6F7 /* ZYPicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYPicInfo.swift; sourceTree = "<group>"; };
 		0950300B1CF456790056D6F7 /* ZYStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYStatusCell.swift; sourceTree = "<group>"; };
 		0950300C1CF456790056D6F7 /* ZYStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYStatusCell.xib; sourceTree = "<group>"; };
+		0950300F1CF54FC80056D6F7 /* ZYBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYBottomView.swift; sourceTree = "<group>"; };
+		095030111CF54FE90056D6F7 /* ZYBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYBottomView.xib; sourceTree = "<group>"; };
 		0964C6DF1CDC9590008D45CC /* ZYNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNetworkTool.swift; sourceTree = "<group>"; };
 		0964C6E81CDC9FB4008D45CC /* ZYOAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYOAuthVC.swift; sourceTree = "<group>"; };
 		0964C6EA1CDCA008008D45CC /* ZYLoginInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYLoginInfo.swift; sourceTree = "<group>"; };
@@ -355,6 +359,8 @@
 				09D289531CC08FA700E60E46 /* ZYNoLoginView.xib */,
 				0950300B1CF456790056D6F7 /* ZYStatusCell.swift */,
 				0950300C1CF456790056D6F7 /* ZYStatusCell.xib */,
+				0950300F1CF54FC80056D6F7 /* ZYBottomView.swift */,
+				095030111CF54FE90056D6F7 /* ZYBottomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +679,7 @@
 				0974BCEA1CB5013C003D5541 /* Assets.xcassets in Resources */,
 				09318AC81CD89C180065BAF9 /* ZYPoperVc.xib in Resources */,
 				09BEF4C01CEEE38F00651544 /* ZYWelcomeVc.xib in Resources */,
+				095030121CF54FE90056D6F7 /* ZYBottomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,6 +757,7 @@
 				09CA835F1CDB3E9E009F1841 /* ZYMyCardVc.swift in Sources */,
 				09D2895A1CC0989C00E60E46 /* UIView+AutoLayout.m in Sources */,
 				0964C6ED1CDCA1D8008D45CC /* ZYAPI.swift in Sources */,
+				095030101CF54FC80056D6F7 /* ZYBottomView.swift in Sources */,
 				09D289521CC08F9400E60E46 /* ZYNoLoginView.swift in Sources */,
 				0974BCE81CB5013C003D5541 /* WerBoForSwift.xcdatamodeld in Sources */,
 				09318ACA1CD89C610065BAF9 /* ZYPresentationController.swift in Sources */,

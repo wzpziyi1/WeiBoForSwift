@@ -4,19 +4,13 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/Vc/ZYHomeVc.swift"
-            timestampString = "485851663.145743"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
-            landmarkType = "5">
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,13 +19,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WerBoForSwift/Class/Home/Vc/ZYHomeVc.swift"
-            timestampString = "485851663.145743"
+            filePath = "WerBoForSwift/Class/Home/View/ZYPhotoView.swift"
+            timestampString = "485879914.012826"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "tableView(_:heightForRowAtIndexPath:)"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "layoutSubviews()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

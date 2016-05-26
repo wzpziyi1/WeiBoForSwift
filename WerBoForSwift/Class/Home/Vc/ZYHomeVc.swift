@@ -150,7 +150,7 @@ class ZYHomeVc: ZYBaseTableVc {
     func loadMoreStatus()
     {
         
-        let params = ["access_token": loginInfo!.access_token!, "count": NSNumber(int: 20)]
+        let params = ["access_token": loginInfo!.access_token!, "count": NSNumber(int: 50)]
         
         ZYHomeNetTool.fetchStatusInfosWithParams(params, succeed: { (result) in
                 if (result != nil && result?.count != 0)

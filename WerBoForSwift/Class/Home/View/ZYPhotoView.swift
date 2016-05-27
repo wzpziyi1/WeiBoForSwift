@@ -64,6 +64,9 @@ class ZYPhotoView: UIView {
             {
                 let imageView = UIImageView()
                 
+                imageView.contentMode = UIViewContentMode.ScaleAspectFill
+                imageView.clipsToBounds = true
+                
                 let urlStr = picInfos![total].thumbnail_pic!
                 
                 addSubview(imageView)

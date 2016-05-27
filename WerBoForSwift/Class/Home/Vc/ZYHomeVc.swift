@@ -79,6 +79,9 @@ class ZYHomeVc: ZYBaseTableVc {
     //所有微博
     private lazy var statusInfos = Array<ZYStatusInfo>()
     
+    //缓存cell的height
+    private lazy var cellHeights = Array<CGFloat>()
+    
     //MARK: ----setup
     private func setupNavigationBar()
     {
@@ -175,11 +178,23 @@ class ZYHomeVc: ZYBaseTableVc {
                     }
                     
                 }
+                self.calculateHeightForCell()
                 self.tableView.reloadData()
             }) { (error) in
                 print(error)
         }
         
+    }
+    
+    //MARK: ----other
+    private func calculateHeightForCell()
+    {
+        cellHeights.removeAll()
+        for item in statusInfos {
+            commonCell.statusInfo = item
+            let height = commonCell.fetchHeightFromCell()
+            cellHeights.append(height)
+        }
     }
     
     //MARK: ----TableViewDataSource
@@ -204,9 +219,8 @@ class ZYHomeVc: ZYBaseTableVc {
     //MARK: ----TableViewDelegate
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        commonCell.statusInfo = statusInfos[indexPath.row]
-        let height = commonCell.fetchHeightFromCell()
-        return height
+        
+        return cellHeights[indexPath.row]
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

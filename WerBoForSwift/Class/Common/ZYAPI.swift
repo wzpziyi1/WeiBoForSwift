@@ -15,4 +15,4 @@ let kApiAccessToken = "oauth2/access_token"
 let kApiUserInfo = "2/users/show.json"
 
 //获取最新微博接口
-let kApiStatusInfo = "2/statuses/friends_timeline.json"
+let kApiStatusInfo = "2/statuses/public_timeline.json"
